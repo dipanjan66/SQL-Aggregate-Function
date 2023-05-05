@@ -1,0 +1,110 @@
+-- Aggregate Function:==>
+
+
+COUNT()
+AVG()
+MIN()
+MAX()
+SUM()
+
+--===============================================================
+
+-- COUNT() Syntax:==>
+
+
+SELECT COUNT(column_name)   -- COUNT need this parenthisis ()
+FROM table_name
+WHERE condition;
+
+
+---------------------------------
+-- Example:==>
+
+-- Q. How many Rows in the Table
+
+select COUNT (*) from payment;  
+
+--------------------------------------
+
+-- Q. How many Rows in amount Column.
+
+select COUNT(amount) from payment; 
+
+------------------------------------------
+
+-- Q. Count How many Unique Row in amount Column 
+
+select COUNT(DISTINCT amount) from payment;
+
+
+--============================================================================
+
+-- AVG() - Syntax:==> Average
+
+
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+
+
+----------------------------------
+
+-- Example:==>
+
+select avg(amount) from payment;
+
+----------------------------------------
+-- Take Round Figure after Point
+
+
+select ROUND(avg(amount), 2) from payment;
+
+--==============================================================================
+
+-- MIN() - Syntax:==>
+
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+
+
+-------------------------------
+
+-- Example:==>
+
+select min(amount) from payment;
+
+--==============================================================================
+
+-- MAX() - Syntax:==>
+
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
+
+-------------------------------
+
+-- Example:==>
+
+select max(amount) from payment;
+
+--===============================================================================
+
+
+-- SUM() Syntax:==>
+
+
+SELECT SUM(column_name)
+FROM table_name
+WHERE condition;
+
+
+--------------------------------
+
+--Example:-
+
+select SUM(replacement_cost) from film;
+
+
+
